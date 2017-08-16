@@ -1,0 +1,105 @@
+.myPost{}
+.myPostTop{overflow:hidden;padding:20px 0 15px;}
+.myPostTop a{line-height:24px; font-size:14px; color:#555; height:24px; display:inline-block; float: left;}
+.myPostTop a.on{color:#03F;}
+.myPostTop span{margin:0 10px; height:24px; line-height:24px; float:left; display:inline-table;}
+.myPost_Table th.first{width:540px; border-left:1px solid #dcdcdc;}
+.myPost_Table th.last{border-right:1px solid #dcdcdc;width:140px;}
+.myPost_Table td{height:58px; line-height:58px; border-bottom:solid 1px #dcdcdc; text-align:center;}
+.myPost_Table td a{text-decoration: none;}
+.myPost_Table td.myPost_ThemeTitle{height:30px; line-height:38px; color:#555; padding-left:10px; text-align:left;}
+.myPost_ThemeTitle img{ vertical-align:middle; margin-right:10px; }
+.myPost_Table td .myPost_hf{line-height:20px; font-size:14px;color:#555; text-align:center;height: 30px;}
+.myPost_Table td .myPost_ck{color:#999; line-height:18px; font-size:12px; text-align:center;}
+.myPost_Table td .myPost_name{line-height:20px;font-size:14px;color:#555; text-align:center;}
+.myPost_Table td .myPost_time{color:#999; line-height:18px; font-size:12px; text-align:center;}
+.myPost_Table td .myPost_time a{text-decoration: none;}
+.myPost_homework{}
+.myPost_homework dl{overflow:hidden; padding:20px 0 25px; border-bottom:solid 1px #efefef;}
+.myPost_homework dt{width:80px; height:76px; border:solid 1px #A4D992; background:#A4D992; float:left;}
+.myPost_hwNum{height:28px; background:#fff; text-align:center; font-size:12px;line-height:28px; overflow:hidden;}
+.myPost_hwTitle{height:40px;font-size:12px;line-height:20px; overflow:hidden; padding:4px;color:#fff;}
+.myPost_homework dd{width:640px; float:right;}
+.myPost_homework dd.myPost_Ls{width:805px; float:right;}
+.myPost_homework dd.myPost_hwButton{width:165px; overflow:hidden; padding-top:15px;}
+.myPost_homework dd.myPost_hwButton a{width:114px; height:33px;display:block;float:right;text-align:center;color:#fff; line-height:33px;}
+.myPost_homework dd.myPost_hwButton a.myPost_hwNone{color:#999;}
+.myPost_hwInfo{line-height:24px; padding-bottom:10px;}
+.myPost_hwInfo span{color:#b1b1b1; margin-right:15px;font-size:16px;}
+.myPost_hwInfo span.myPost_hwName{color:#009fd6; }
+.myPost_hwInfo .hui{color:#555; margin-left:8px;}
+.myPost_hwInfo b{font-weight:normal;}
+.myPost_hwInfo .red{color:#F00;}
+.myPost_hwText{color:#555; line-height:20px;}
+.myPost_LsInfo{font-size:16px; color:#999; padding:5px 0 10px;}
+.myPost_LsInfo span{font-weight:normal;color:#555;}
+.myPost_LsInfo span.red{color:#900;}
+.myPost_LsText{ font-size:18px; overflow:hidden; height:26px; line-height:26px;}
+.myPost_LsZy{border:solid 3px #68BF4A; background:#C5D8BF;}
+.myPost_LsVideo{padding:30px 0; text-align:center}
+.myPost_LsEng{padding:0 25px 30px;color:#555;}
+.myPost_LsButton{height:35px; padding-top:20px;overflow:hidden;}
+.myPost_LsButton table{margin:0 auto;}
+.myPost_ReleaseZw{}
+.myPost_ReleaseZw dl{overflow:hidden; padding:20px 0 25px; border-bottom:solid 1px #efefef;}
+.myPost_ReleaseZw dt{width:80px; height:28px; border:solid 1px #A4D992; float:left;}
+.myPost_hwNum{height:28px; background:#fff; text-align:center; font-size:12px;line-height:28px; overflow:hidden;}
+.myPost_ReleaseZw dd{width:805px; float:right;}
+.myPost_ReleaseButton{overflow:hidden; padding-top:20px;}
+.pageList{padding:70px 0 20px; overflow:hidden;display:none;}
+.pageList ul{display:inline-table; float:right; overflow:hidden;}
+.pageList li{float:left; display:inline-table; height:33px; line-height:32px; margin:0 3px;}
+.pageList li a{color:#65656;text-decoration: none;}
+.pageList li span{color:#009FD6;}
+.pageList li a.pret,
+.pageList li a.next{width:73px; height:33px; display:block; background:url(../images/pageList.jpg) 0 0 no-repeat; text-align:center; color:#fff;}
+.text_cray{ font-size:12px; color:#6b6b6b;text-decoration: none; line-height:17px;}
+.text_cray1{font-size:12px;color: #333333;text-decoration: none;}
+.header{
+	
+	margin-top: 25px;
+    height: 50px;
+    text-align: center;
+}
+
+.header a.first{
+	color: #12b7f5;
+	text-decoration: none;
+}
+.header a.last{
+	color: #555;	
+	text-decoration: none;
+}
+.header a:hover{
+	color: #12b7f5;
+}
+.header a.last:hover{
+	color: #12b7f5;
+}
+.header a label{
+	font-size: 22px;
+	font-weight:500;	
+	font-style: inherit;
+}
+#lyricWrapper {
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+    margin-top: 20px;
+    display:none;
+}
+#lyricContainer {
+	width:300px;
+    position: relative;
+    top: 20px;
+    text-shadow: 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000; 
+}
+#lyricContainer p{
+     text-align: center;
+}
+/*播放时的字体状态*/
+.fontStyle {
+	font-size: 20px;
+	color: #ccc;
+}

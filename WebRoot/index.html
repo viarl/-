@@ -1,0 +1,594 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<link href="/ktvOnline/css/showbox.css" rel="stylesheet" type="text/css">
+<link href="/ktvOnline/css/button.css" rel="stylesheet" type="text/css">
+<link href="/ktvOnline/css/chat.css" rel="stylesheet" type="text/css">
+</head>
+
+<style>
+	html,body{
+		height: 100%;
+		width: 100%;
+	}
+</style>
+
+<body marginheight="0" marginwidth="0" style="margin: 0px;padding: 0px;overflow: hidden;">
+
+	<iframe id="iframeMain" name="iframeMain"
+		src="/ktvOnline/User/frame.html" width="100%" height="100%" frameborder="0">
+	</iframe>
+
+	<script type="text/javascript" src="/ktvOnline/js/jquery.js"></script>
+
+	<div id="MyDiv" class="white_content"></div>
+	
+	<form><!-- 登录界面  -->
+		<div id="table1" class="table_white_content">
+			<table align="center" border="0" class="tableStyle" cellpadding="0px" cellspacing="0px">
+			<tr><td colspan="3">
+			<table cellpadding="0px" cellspacing="0px" class="toptable">
+				<tr style="height: 28px;">
+					<td align="right"><input type="button"
+						class="button-exit" onclick="CloseDiv()"></td>
+				</tr>
+				<tr style="height: 115px;">
+					<td></td>
+				</tr>
+			</table>
+			</td>
+			</tr>
+			<tr><td colspan="3" height="5px"></td></tr>
+				<tr>
+				    <td rowspan="8" style="border-right-style:solid;border-right-color:#e7e7e7;   width:130px; background-image:url(/ktvOnline/images/bg_left.jpg);"></td>
+					<td align="right" style="width:75px;">用户名：</td>
+					<td align="left"><input type="text" id="username"
+						name="username" onblur="user_validate('username','td1')">
+					</td>
+				</tr>
+
+				<tr style="height: 25px">
+					<td colspan="2" align="center"
+						style="color:#F00;  font-size:14px; display:none" id="td1"></td>
+				</tr>
+
+				<tr>
+					<td align="right">密 &nbsp;&nbsp;码：</td>
+					<td align="left"><input type="password" id="password"
+						name="password" onblur="pwd_validate('password','td2')"></td>
+				</tr>
+				<tr style="height: 25px">
+					<td colspan="2" align="center"
+						style="color:#F00;  font-size:14px; display:none" id="td2"></td>
+				</tr>
+
+				<tr>
+					<td align="right">验证码：</td>
+					<td align="left"><input type="text" id="code"
+						size="6" />&nbsp;&nbsp;<img
+							src="/ktvOnline/AutoCodeServlet" style="vertical-align:middle;"  width="80px" height="24px"
+							onclick="reloadCode()" id="authcode"></td>
+				</tr>
+				<tr style="height: 25px">
+					<td colspan="2" align="center"
+						style="color:#F00;  font-size:14px; display:none" id="td3"></td>
+				</tr>
+				<tr align="center">
+					<td colspan="2"><input type="checkbox" id="autoLogin" name="autoLogin"
+						style="height: 15px;width: 15px">下次自动登录</td>
+				</tr>
+				<tr>
+					<td colspan="2"></td>
+				</tr>
+				<tr><td></td>
+					<td colspan="2" align="center"><input type="button" id="login"
+						onclick="Login()" value="登录">&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp; <input type="button"
+						 onclick="show_register()" value="注册"></td>
+				</tr>
+			</table>
+		</div>
+	</form>
+	
+	<form><!-- 注册界面  -->
+	  <div id="table2" class="register_content">
+	  <table align="center" border="0" class="tableStyle" cellpadding="0px" cellspacing="0px">
+			<tr><td colspan="2">
+			<table cellpadding="0px" cellspacing="0px" class="toptable" style="height: 58px">
+				<tr style="height: 28px;">
+					<td align="right"><input type="button"
+						class="button-exit" onclick="return_Login()"></td>
+				</tr>
+				<tr style="height: 30px;">
+					<td align="center" style="color: #F00; font-weight: 500; font-size: 14px">*以下均为必填项</td>
+				</tr>
+			</table>
+			</td>
+			</tr>
+			<tr><td colspan="2" height="5px"></td></tr>
+				<tr>				   
+					<td align="right" style="width:150px;">用户名：</td>
+					<td align="left"><input type="text" id="rusername"
+						name="rusername" onblur="register_username('rusername','rtd1')">
+					</td>
+				</tr>
+
+				<tr style="height: 25px">
+					<td colspan="2" align="center"
+						style="color:#F00;  font-size:14px; display:none" id="rtd1"></td>
+				</tr>
+				
+				<tr>				   
+					<td align="right" style="width:150px;">昵&nbsp;&nbsp;&nbsp;称：</td>
+					<td align="left"><input type="text" id="nickname"
+						name="nickname" onblur="nick_validate('nickname','rtd2')">
+					</td>
+				</tr>
+
+				<tr style="height: 25px">
+					<td colspan="2" align="center"
+						style="color:#F00;  font-size:14px; display:none" id="rtd2"></td>
+				</tr>
+
+				<tr>
+					<td align="right">密 &nbsp;&nbsp;码：</td>
+					<td align="left"><input type="password" id="rpassword"
+						name="rpassword" onblur="pwd_validate('rpassword','rtd3')"></td>
+				</tr>
+				<tr style="height: 25px">
+					<td colspan="2" align="center"
+						style="color:#F00;  font-size:14px; display:none" id="rtd3"></td>
+				</tr>
+
+				<tr>
+					<td align="right">确认密码：</td>
+					<td align="left"><input type="password" id="rpassword2"
+						name="rpassword2" onblur="passwordAgin('rpassword','rpassword2','rtd4')"></td>
+				</tr>
+				<tr style="height: 25px">
+					<td colspan="2" align="center"
+						style="color:#F00;  font-size:14px; display:none;" id="rtd4"></td>
+				</tr>
+				
+				<tr>
+					<td align="right">性&nbsp;&nbsp;&nbsp;别：</td>
+					<td align="left"><input type="radio" id="radio1" name="sex" value="0" checked="checked"><label>男</label> 
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="radio2" name="sex" value="1"><label>女</label>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2"></td>
+				</tr>
+				
+				<tr align="center">
+					<td colspan="2"><input type="checkbox" id="agreement" name="agreement"
+						style="height: 15px;width: 15px" onclick="check_button('register_button','agreement')"><a href="" style="color: blue;">我已阅读协议</a></td>
+				</tr>
+				<tr>
+					<td colspan="2"></td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center"><input type="button" id="register_button"
+						disabled="disabled" onclick="register_user()" value="注册"></td>
+				</tr>
+			</table>  
+	  </div>
+	</form>
+	
+	<div id="table3" class="register_content"> <!-- 跳转界面 -->
+	<table align="center" border="0" class="tableStyle" cellpadding="0px" cellspacing="0px">
+			<tr><td colspan="3">
+			<table cellpadding="0px" cellspacing="0px" class="toptable">
+				<tr style="height: 540px;">
+					<td>注册成功，点击<a href="javascript:Login()">跳转登录</a></td>
+				</tr>			
+			</table>
+			</td>
+			</tr>
+			<tr><td height="5px"></td></tr>
+				<tr>
+				    <td></td>
+				</tr>			
+			</table>
+	</div>
+	
+	<div id="friend" class="friends"> <!-- 添加好友界面 -->
+	<table align="center" border="0">	       
+			<tr>
+			<td><label style="font-size: 13px; color: white;">搜索结果<label id="nfnum"></label>：</label></td>
+			<td align="right"><input type="button" onclick="closeFriends()" value="关闭"></td>
+			</tr>
+			<tr height="2px"><td></td><td></td></tr>			 
+    </table>
+    
+    <table id="ftable">
+    <tbody id="fon" style="font-size: 14px;">
+    <tr><td></td></tr>
+    </tbody>
+    
+    <tbody id="fout" style="font-size: 14px;">
+    <tr><td></td></tr>
+    </tbody>
+    </table>   
+	</div>
+	
+	<div id="itemInfo" class="itemInfo_content"> <!-- 个人信息 -->
+	<table border="0" style="height: 100%;width:100%;border: 2px; border-style: ridge;" cellpadding="0" cellspacing="0">
+	   <tr height="10px">
+	     <td colspan="4"></td>
+	   </tr>
+	   <tr height="25px">
+	     <td colspan="4" width="100%" align="center">
+	     <table width="90%" height="90%">
+	     <tr>
+	     <td align="center"><label id="itemtitle"></label><label>的个人信息</label></td>
+	     <td align="center" width="30px"><input type="button" value="修改" id="updateItem" onclick="update()">
+	     <input type="button" value="确定" id="sureItem" style="display: none" onclick="sure()">
+	     </td>
+	     </tr>
+	     </table>     	     
+	   </tr>
+	   <tr height="10px">
+	     <td colspan="4"></td>
+	   </tr>
+	   <tr>
+	     <td colspan="2" rowspan="3" width="200px">
+	       <table border="0" style="height: 100%;width:80%;" align="center">
+	         <tr><td height="180px" style="border:inset; border-width: 3px; border-color: #CDCDC1"><img src="/ktvOnline/images/photo1.jpg" width="157" height="180" id="iphoto"> </td></tr>
+	         <tr><td align="center"><span style="display: none"><input type="file" style="width: 157px" id="iupload" name="iupload"></span></td></tr>
+	         <tr><td align="center"><input type="button" onclick="iupload()" value="更改头像" disabled="disabled" id="b_upload"></td></tr>
+	       </table>
+	     </td>
+	     
+	     
+	     <td colspan="2" rowspan="3" width="200px" >
+	     <table border="0" height="100%" width="80%">
+	     <tr>
+	     <td align="left" width="40px">用户:</td>
+	     <td width="5px"></td>
+	     <td align="left"><label id="itemname"></label></td>
+	     </tr>
+	     <tr>
+	     <td align="left" width="40px">昵称:</td>
+	     <td width="5px"></td>
+	     <td align="left"><label id="itemnick"></label><input type="text" id="tnick" style="display: none;width: 80px"></td>
+	     </tr>
+	     <tr>
+	     <td align="left" width="40px">性别:</td>
+	     <td width="5px"></td>
+	     <td align="left">
+	     <input type="radio" id="itemsex1" name="isex" value="0" disabled="disabled"><label>男</label> 
+	     &nbsp;&nbsp;&nbsp;<input type="radio" id="itemsex2" name="isex" value="1" disabled="disabled"><label>女</label>
+	     </td>
+	     </tr>
+	     <tr height="20px"><td></td></tr>
+	     </table>	       
+	     </td>	    
+	   </tr>
+	   <tr></tr>
+	   <tr></tr>
+	    <tr height="40px">
+	     <td colspan="4" align="center">
+	     <table width="80%" height="100%">
+	       <tr>
+	       <td>
+	       <textarea id="icontent" cols="45" rows="2" disabled="disabled"></textarea>
+	       </td>
+	       </tr>
+	     </table>	     
+	     </td>
+	   </tr>
+	   <tr height="40px">
+	    <td colspan="4" align="center">
+	    <table height="80%" width="80%">
+	    <tr>
+	     <td align="center"><a href="javascript:owner()" class="info_a"><label>个人音乐中心</label></a></td>
+	     <td align="center"><a href="/ktvOnline/LogoutServlet" class="info_a"><label>登出</label></a></td>
+	     </tr>
+	     </table>
+	     </td>
+	   </tr>
+	</table>
+	</div>
+	
+	<div id="fInfo" class="fInfo_content"> <!-- 好友信息 -->
+	   <table border="0" style="height: 100%;width:100%;border: 2px; border-style: ridge;" cellpadding="0" cellspacing="0">
+	   <tr height="10px">
+	     <td colspan="4"></td>
+	   </tr>
+	   <tr height="25px">
+	     <td colspan="4" width="100%" align="center">
+	     <table width="90%" height="90%">
+	     <tr>
+	     <td align="center"><label id="ftitle"></label><label>的个人信息</label></td>	     
+	     </td>
+	     </tr>
+	     </table>     	     
+	   </tr>
+	   <tr height="10px">
+	     <td colspan="4"></td>
+	   </tr>
+	   <tr>
+	     <td colspan="2" rowspan="3" width="200px">
+	       <table border="0" style="height: 100%;width:80%;" align="center">
+	         <tr><td height="180px" style="border:inset; border-width: 3px; border-color: #CDCDC1"><img src="" width="157" height="180" id="fphoto"> </td></tr>	       
+	         <tr><td height="30px" align="left">&nbsp;&nbsp;备注：</td></tr>
+	       </table>
+	     </td>
+	     
+	     
+	     <td colspan="2" rowspan="3" width="200px" >
+	     <table border="0" height="100%" width="80%">
+	     <tr>
+	     <td align="left" width="40px">用户:</td>
+	     <td width="5px"></td>
+	     <td align="left"><label id="fname"></label></td>
+	     </tr>
+	     <tr>
+	     <td align="left" width="40px">昵称:</td>
+	     <td width="5px"></td>
+	     <td align="left"><label id="fnick"></label></td>
+	     </tr>
+	     <tr>
+	     <td align="left" width="40px">性别:</td>
+	     <td width="5px"></td>
+	     <td align="left">
+	     <input type="radio" id="fsex1" name="fsex" value="0" checked="checked" disabled="disabled"><label>男</label> 
+	     &nbsp;&nbsp;&nbsp;<input type="radio" id="fsex2" name="fsex" value="1" disabled="disabled"><label>女</label>
+	     </td>
+	     </tr>
+	     <tr height="20px"><td></td></tr>
+	     </table>	       
+	     </td>	    
+	   </tr>
+	   <tr></tr>
+	   <tr></tr>
+	    <tr height="40px">
+	     <td colspan="4" align="center">
+	     <table width="80%" height="100%">
+	       <tr>
+	       <td>
+	       <textarea id="fcontent" cols="45" rows="2" disabled="disabled"></textarea>
+	       </td>
+	       </tr>
+	     </table>	     
+	     </td>
+	   </tr>
+	   <tr height="40px">
+	    <td colspan="4" align="center">
+	    <table height="80%" width="80%">
+	    <tr>
+	     <td align="right"><a href="javascript:void(0)" class="info_a" id="f_center"><label>个人音乐中心</label></a></td>
+	     <td align="center"><a href="javascript:void(0)" class="info_a" id="chat"><label>发起聊天</label></a></td>
+	     <td align="left"><a href="javascript:void(0)" class="info_a" id="a_add"><label id="yorn">删除好友</label></a></td>
+	     </tr>
+	     </table>
+	     </td>
+	   </tr>
+	</table>
+	</div>
+		
+	<div id="room_div" class="room_div"><!-- 房间信息 -->
+	   <table border="0" style="height: 100%;width:100%;border: 2px; border-style: ridge;" cellpadding="0" cellspacing="0">
+	   <tr height="20px">
+	     <td colspan="4"></td>
+	   </tr>
+	   <tr height="25px">
+	     <td colspan="4" width="100%" align="center">
+	     <table width="90%" height="90%">
+	     <tr>
+	     <td align="center"><label id="roomtitle"></label><label>的房间</label></td>	     
+	     </td>
+	     </tr>
+	     </table>     	     
+	   </tr>
+	   <tr height="20px">
+	     <td colspan="4"></td>
+	   </tr>
+	   <tr>
+	     <td colspan="2" rowspan="3" width="200px">
+	       <table border="0" style="height: 100%;width:80%;" align="center">
+	         <tr><td height="180px" style="border:inset; border-width: 3px; border-color: #CDCDC1"><img src="" width="157" height="180" id="roomPhoto"> </td></tr>	       
+	         <tr><td height="30px" align="left">&nbsp;&nbsp;</td></tr>
+	       </table>
+	     </td>
+	     
+	     <td colspan="2" rowspan="3" width="200px" >
+	     <table border="0" height="100%" width="90%">
+	     <tr>
+	     <td align="left" width="55px">房间名:</td>
+	     <td width="5px"></td>
+	     <td align="left"><input type="text" id="roomname" style="width: 100px"></td>
+	     </tr>	     	     
+	     <td align="left">人数:</td>
+	     <td width="5px"></td>
+	     <td align="left">	<select id="rnum" name="rnum" style="width: 100px">
+				<option value="6" selected="selected">6人</option>
+				<option value="10" >10人</option>
+				<option value="15" >15人</option>
+			</select>     
+	     </td>
+	     </tr>
+	     	     	    
+	     <tr>
+	     <td align="left">密码:</td>
+	     <td width="5px"></td>
+	     <td align="left"><input type="radio" id="rpwd1" name="rpwd" value="0" checked="checked" onclick="notpwd()"><label>无</label>
+	     &nbsp;&nbsp;<input type="radio" id="rpwd2" name="rpwd" value="1" onclick="allowpwd()"><label>有</label>
+	     </td>	     
+	     </tr>
+	     <tr><td colspan="3" height="38px"><input type="password" id="roompsd" disabled="disabled"></td></tr>
+	     <tr>     
+	     <tr height="20px"><td></td></tr>
+	     </table>	       
+	     </td>	    
+	   </tr>
+	   <tr></tr>
+	   <tr></tr>
+	    <tr height="20px">
+	     <td colspan="4" align="center">   
+	     </td>
+	   </tr>
+	   <tr height="40px">
+	    <td colspan="4" align="center" valign="top">
+         <input type="button" value="创建" style="width: 100px" onclick="createRoom()"></td>	     
+	     </tr>
+	</table>	 
+	</div>	
+
+    <div id="chatMain"> <!-- 聊天界面 -->
+        <header id="h">
+           <label>和用户“<label id="chatTitle"></label>”聊天中</label>
+           <a href="javascript:ChatHidden();">-</a>
+            <a href="javascript:ChatShow();">+</a>
+            <a href="javascript:ChatClose();">x</a>
+        </header>
+        <table cellspacing="0" cellpadding="0" id="chatInterface">
+            <tr>
+                <td id="singer" rowspan="2">
+                    <div>
+                        <table cellspacing="0" cellpadding="0">
+                         <tbody id="chatfriend"></tbody> 
+                         <tbody id="chatstranger"></tbody>                            
+                       </table>
+                    </div>
+                </td>
+                <td id="chatBody">
+                    <div id="chatBodyDiv">
+                        <table id="chatText" width="100%">
+                           <tbody></tbody>     
+                        </table>                       
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td id="chatBtn">
+                    <textarea id="ChatValue"></textarea>
+                    <button class="send" onclick="sendtext()" id="sendText">发<br>送</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+	
+	<div id="a_news" onclick="shownews()"><label>聊天助手</label><label id="stranger_ts" style="color: red"></label></div>
+	
+	<div id="pwd_div" class="pwd"> 
+	  <p align="center"><input type="text" id="pwd"></p>
+	  <p><label id="ts" style="color:white;">请输入房间密码</label></p>
+	</div>
+	
+	<script type="text/javascript" src="/ktvOnline/js/validate.js"></script>
+	<script type="text/javascript" src="/ktvOnline/js/connection.js"></script>
+	<script type="text/javascript" src="/ktvOnline/js/index.js"></script>
+	<script type="text/javascript" src="/ktvOnline/js/ajaxfileupload.js"></script>
+	<script type="text/javascript" src="/ktvOnline/js/chat.js"></script>
+	<script type="text/javascript">
+	 $(function(){	     
+	     document.getElementById("iframeMain").onload= function() {
+	     	connAll();	     	
+          };
+	 });
+	 $(document).keyup(function(event){
+        if($("#pwd_div").css("display")=="block"&& $("#pwd").is(":focus"))
+		   if(event.keyCode==13){		      
+		      sureRoom();
+		     }
+		});   
+	
+	function iupload() {
+			$("#iupload").click();
+		}
+		function getObjectURL(file) {
+			var url = null;
+			if (window.createObjectURL != undefined) { // basic
+				url = window.createObjectURL(file);
+			} else if (window.URL != undefined) { // mozilla(firefox)
+				url = window.URL.createObjectURL(file);
+			} else if (window.webkitURL != undefined) { // webkit or chrome
+				url = window.webkitURL.createObjectURL(file);
+			}
+			return url;
+		}
+		$("#iupload").change(function() {
+			var objUrl;
+			if (navigator.userAgent.indexOf("MSIE") > 0) {
+				objUrl = this.value;
+			} else
+				objUrl = getObjectURL(this.files[0]);
+			console.log("objUrl = " + objUrl);
+			$("#iphoto").attr("src", objUrl);
+		});
+
+		/*字数限制*/
+		$("#content").on("input propertychange", function() {
+			var $this = $(this), _val = $this.val(), count = "";
+			if (_val.length > 46) {
+				$this.val(_val.substring(0, 46));
+			}
+			count = 46 - $this.val().length;
+			// $("#text-count").text(count);  
+		});
+
+		$("body").bind("click", function(e) {
+			var target = $(e.target);
+			var item = $("#itemInfo");
+			var finfo = $("#fInfo");
+			var room_div = $("#room_div");
+            var friend=$("#friend");
+            
+			if (item.css("display") == "block") {
+				if (target.closest(".itemInfo_content").length == 0) {
+					item.css("display", "none");
+					var file = $("#iupload");
+					file.after(file.clone().val(""));
+					file.remove();
+					closeUpdate();
+				}
+			} else if (finfo.css("display") == "block") {
+				if (target.closest(".fInfo_content").length == 0) {
+					finfo.css("display", "none");
+					$("#yorn").text("删除好友");
+				}
+			} else if (room_div.css("display") == "block") {
+				if (target.closest(".room_div").length == 0)
+					room_div.css("display", "none");
+			}
+		});
+
+		function allowpwd() {
+			$("#roompsd").attr("disabled", false);
+		}
+
+		function notpwd() {
+			$("#roompsd").attr("disabled", true);
+			$("#roompsd").val("");
+		}
+
+		var flag = 0;
+		$(document).ready(function() {
+			$("#ChatValue").focus(function() {
+				flag = 1;
+			});
+
+			$("#ChatValue").blur(function() {
+				flag = 0;
+			});
+		});
+
+		$(document).keyup(function(event) {
+			if (event.ctrlKey == 1 && event.keyCode == 13) {
+				if (flag == 1)
+					$("#sendText").click();
+			}
+		});
+		
+		function reloadCode(){
+			
+			$("#authcode")[0].src="/ktvOnline/AutoCodeServlet?s="+new Date().getTime();
+		}
+		
+	</script>
+</body>
+</html>

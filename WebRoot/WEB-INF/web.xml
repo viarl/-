@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <display-name></display-name>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>QueryUserByName</servlet-name>
+    <servlet-class>servlet.QueryUserByName</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>RegisterServlet</servlet-name>
+    <servlet-class>servlet.RegisterServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>CheckNameServlet</servlet-name>
+    <servlet-class>servlet.CheckNameServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AllSocketServlet</servlet-name>
+    <servlet-class>servlet.AllSocketServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LogoutServlet</servlet-name>
+    <servlet-class>servlet.LogoutServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>QueryFriendsServlet</servlet-name>
+    <servlet-class>servlet.QueryFriendsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>QueryFriendInfo</servlet-name>
+    <servlet-class>servlet.QueryFriendInfo</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpdateInfoServlet</servlet-name>
+    <servlet-class>servlet.UpdateInfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>QueryUserList</servlet-name>
+    <servlet-class>servlet.QueryUserList</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LockUserServlet</servlet-name>
+    <servlet-class>servlet.LockUserServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AutoCodeServlet</servlet-name>
+    <servlet-class>servlet.AutoCodeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>QueryMusicList</servlet-name>
+    <servlet-class>servlet.QueryMusicList</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DeleteMusic</servlet-name>
+    <servlet-class>servlet.DeleteMusic</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>RoomServlet</servlet-name>
+    <servlet-class>servlet.RoomServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>CreateRoom</servlet-name>
+    <servlet-class>servlet.CreateRoom</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LrcServlet</servlet-name>
+    <servlet-class>servlet.LrcServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ValidatePwd</servlet-name>
+    <servlet-class>servlet.ValidatePwd</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>TipServlet</servlet-name>
+    <servlet-class>servlet.TipServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>QueryMusicByUploader</servlet-name>
+    <servlet-class>servlet.QueryMusicByUploader</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>QueryPrivate</servlet-name>
+    <servlet-class>servlet.QueryPrivate</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>QueryRecord</servlet-name>
+    <servlet-class>servlet.QueryRecord</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AddMusic</servlet-name>
+    <servlet-class>servlet.AddMusic</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UploadRecord</servlet-name>
+    <servlet-class>servlet.UploadRecord</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>QueryRecordBZ</servlet-name>
+    <servlet-class>servlet.QueryRecordBZ</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>PrivateDeleteMusic</servlet-name>
+    <servlet-class>servlet.PrivateDeleteMusic</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>PrivateDeleteRecord</servlet-name>
+    <servlet-class>servlet.PrivateDeleteRecord</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   <!--过滤器-->
+    <filter>
+        <filter-name>CharSet</filter-name>
+        <filter-class>filter.CharSetFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>CharSet</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <filter>
+        <filter-name>PwdFilter</filter-name>
+        <filter-class>filter.PwdFilter</filter-class>      
+    </filter>
+    <filter-mapping>
+        <filter-name>PwdFilter</filter-name>
+        <url-pattern>/Room/*</url-pattern>
+    </filter-mapping>
+
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/LoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>QueryUserByName</servlet-name>
+    <url-pattern>/QueryUserByName</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RegisterServlet</servlet-name>
+    <url-pattern>/RegisterServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CheckNameServlet</servlet-name>
+    <url-pattern>/CheckNameServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AllSocketServlet</servlet-name>
+    <url-pattern>/AllSocketServlet</url-pattern>
+  </servlet-mapping>  
+  <servlet-mapping>
+    <servlet-name>LogoutServlet</servlet-name>
+    <url-pattern>/LogoutServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>QueryFriendsServlet</servlet-name>
+    <url-pattern>/QueryFriendsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>QueryFriendInfo</servlet-name>
+    <url-pattern>/QueryFriendInfo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateInfoServlet</servlet-name>
+    <url-pattern>/UpdateInfoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>QueryUserList</servlet-name>
+    <url-pattern>/QueryUserList</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LockUserServlet</servlet-name>
+    <url-pattern>/LockUserServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AutoCodeServlet</servlet-name>
+    <url-pattern>/AutoCodeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>QueryMusicList</servlet-name>
+    <url-pattern>/QueryMusicList</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteMusic</servlet-name>
+    <url-pattern>/DeleteMusic</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RoomServlet</servlet-name>
+    <url-pattern>/RoomServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CreateRoom</servlet-name>
+    <url-pattern>/CreateRoom</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LrcServlet</servlet-name>
+    <url-pattern>/LrcServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ValidatePwd</servlet-name>
+    <url-pattern>/ValidatePwd</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>TipServlet</servlet-name>
+    <url-pattern>/TipServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>QueryMusicByUploader</servlet-name>
+    <url-pattern>/QueryMusicByUploader</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>QueryPrivate</servlet-name>
+    <url-pattern>/QueryPrivate</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>QueryRecord</servlet-name>
+    <url-pattern>/QueryRecord</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddMusic</servlet-name>
+    <url-pattern>/AddMusic</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UploadRecord</servlet-name>
+    <url-pattern>/UploadRecord</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>QueryRecordBZ</servlet-name>
+    <url-pattern>/QueryRecordBZ</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PrivateDeleteMusic</servlet-name>
+    <url-pattern>/PrivateDeleteMusic</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PrivateDeleteRecord</servlet-name>
+    <url-pattern>/PrivateDeleteRecord</url-pattern>
+  </servlet-mapping>
+ 
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

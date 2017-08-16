@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="ktvOnline"
+  id="myeclipse.1491638661585"
+  context-root="/ktvOnline"
+  j2ee-spec="5.0"
+  archive="ktvOnline.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

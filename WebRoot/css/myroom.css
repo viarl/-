@@ -1,0 +1,388 @@
+html,body {
+	height: 100%;
+	width: 100%;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.logo {
+	height: 100px;
+}
+
+.sing {
+	width: 250px;
+}
+
+.main {
+	
+}
+
+.singer {
+	width: 180px;
+}
+
+.chat {
+	height: 130px;
+}
+
+.chatTd{
+            padding: 5px 10px 5px 10px;
+        }
+        .chatDiv{
+            height: 100%;
+            width: 100%;
+            overflow-y: auto;
+            padding-left: 7px;
+            -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+            background-color: #ffffff;
+            border: #ffffff solid 2px;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .chatTab{
+            width: 100%;
+            font-size: smaller;
+        }
+        .talkTd1{
+            font-weight: bold;
+            text-align: right;
+            width: 98px;
+            vertical-align: top;
+        }
+        .talkTd2{
+            text-align: center;
+            vertical-align: top;
+            color: #aaaaaa;
+            width:20px;
+        }
+        .talkTd3{
+            vertical-align: top;
+        }
+        .sendDiv{
+            position: relative;
+            height: 100%;
+        }
+        .sendText{
+            width: 100%;
+            box-sizing: border-box;
+            height: 100%;
+            padding-right: 65px;
+            border-radius: 5px;
+            border: solid 1px #CCCCCC;
+        }
+        .sendBtn{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            height: 100%;
+            width: 60px;
+            border:solid 1px #CCCCCC;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+        }
+
+.text-selectMusic{
+-webkit-appearance: none;
+-webkit-rtl-ordering: logical;
+-webkit-user-select: text;
+background-attachment: scroll;
+background-clip: border-box;
+background-color: rgb(63, 64, 72);
+background-image: none;
+background-origin: padding-box;
+background-size: auto;
+border-bottom-color: rgb(38, 39, 47);
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-image-outset: 0px;
+border-image-repeat: stretch;
+border-image-slice: 100%;
+border-image-source: none;
+border-image-width: 1;
+border-left-color: rgb(38, 39, 47);
+border-left-style: solid;
+border-left-width: 1px;
+border-right-color: rgb(38, 39, 47);
+border-right-style: solid;
+border-right-width: 1px;
+border-top-color: rgb(38, 39, 47);
+border-top-style: solid;
+border-top-width: 1px;
+box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px 0px inset;
+color: rgb(255, 255, 255);
+cursor: auto;
+display: inline-block;
+font-family: Arial;
+font-size: 13.3333px;
+font-stretch: normal;
+font-style: normal;
+font-variant: normal;
+font-weight: normal;
+height: 23px;
+letter-spacing: normal;
+line-height: normal;
+margin-bottom: 0px;
+margin-left: 0px;
+margin-right: 0px;
+margin-top: 0px;
+outline-color: rgb(255, 255, 255);
+outline-style: none;
+outline-width: 0px;
+padding-bottom: 0px;
+padding-left: 5px;
+padding-right: 24px;
+padding-top: 0px;
+text-align: start;
+text-indent: 0px;
+text-rendering: auto;
+text-shadow: none;
+text-transform: none;
+transition-delay: 0s, 0s;
+transition-duration: 0.15s, 0.15s;
+transition-property: border-color, box-shadow;
+transition-timing-function: ease-in-out, ease-in-out;
+width: 150px;
+height:22px;
+word-spacing: 0px;
+writing-mode: lr-tb;
+-webkit-writing-mode: horizontal-tb;
+}
+
+
+.button-selectMusic{
+background-attachment: scroll;
+background-clip: border-box;
+background-color: rgba(0, 0, 0, 0);
+background-image:url(/ktvOnline/images/search-btn.jpg);
+background-origin: padding-box;
+background-size: auto;
+border-bottom-color: rgb(51, 51, 51);
+border-bottom-style: none;
+border-bottom-width: 0px;
+border-image-outset: 0px;
+border-image-repeat: stretch;
+border-image-slice: 100%;
+border-image-source: none;
+border-image-width: 1;
+border-left-color: rgb(51, 51, 51);
+border-left-style: none;
+border-left-width: 0px;
+border-right-color: rgb(51, 51, 51);
+border-right-style: none;
+border-right-width: 0px;
+border-top-color: rgb(51, 51, 51);
+border-top-style: none;
+border-top-width: 0px;
+color: rgb(51, 51, 51);
+display: block;
+font-family: 'Microsoft yahei', simsun, tohoma;
+font-size: 12px;
+font-stretch: normal;
+font-style: normal;
+font-variant: normal;
+font-weight: normal;
+height: 22px;
+line-height: 15.6px;
+margin-bottom: 0px;
+margin-left: 0px;
+margin-right: 0px;
+margin-top: 0px;
+padding-bottom: 0px;
+padding-left: 0px;
+padding-right: 0px;
+padding-top: 0px;
+vertical-align: baseline;
+width: 24px;	
+}
+.label-default{
+border-bottom-color: rgb(165, 167, 170);
+border-bottom-style: none;
+border-bottom-width: 0px;
+border-image-outset: 0px;
+border-image-repeat: stretch;
+border-image-slice: 100%;
+border-image-source: none;
+border-image-width: 1;
+border-left-color: rgb(165, 167, 170);
+border-left-style: none;
+border-left-width: 0px;
+border-right-color: rgb(165, 167, 170);
+border-right-style: none;
+border-right-width: 0px;
+border-top-color: rgb(165, 167, 170);
+border-top-style: none;
+border-top-width: 0px;
+color: rgb(165, 167, 170);
+cursor: default;
+display: block;
+font-family: 'Microsoft yahei', simsun, tohoma;
+font-size: 12px;
+font-stretch: normal;
+font-style: normal;
+font-variant: normal;
+font-weight: normal;
+height: 23px;
+right: 59px;
+line-height: 23px;
+margin-bottom: 0px;
+margin-left: 0px;
+margin-right: 0px;
+margin-top: 0px;
+padding-bottom: 0px;
+padding-left: 0px;
+padding-right: 0px;
+padding-top: 0px;
+vertical-align: baseline;
+width: 49px;
+}
+
+.div-musiclist{
+	
+	width:95%;
+	height: 100%;
+	overflow-y:auto;
+	border:3px; 
+    border-bottom-style:inset;
+    border-top-style:inset;
+    border-left-style:inset;
+    box-sizing: border-box;
+}
+
+.div-musiclist table td{
+	line-height:20px; 
+	font-size:14px;
+	color:#555; 
+	text-align:left;
+	height: 30px;
+}
+
+.white_content {
+	display: none;
+	width:933px;
+	height:370px;
+	position: absolute;
+	border: 0px solid lightblue;
+	background-color: rgb(0, 0, 0);
+	z-index: 9999;
+	-moz-opacity: 0.7;
+	opacity: 0.7;
+	filter: alpha(opacity = 50);
+	vertical-align: middle;
+	top: 162px;
+	left:252px;
+	text-align: center;
+}
+
+#header td{
+	width: 155px;
+}
+#header td:hover{
+	 background-color: #CDCDC1;
+}
+
+.next{
+    cursor: pointer;
+    width: 60px;
+    height: 64px;
+    background: url(/ktvOnline/images/r.png) no-repeat;
+    z-index: 10;
+}
+.next:hover{
+	background-color: white;
+}
+.last{
+    cursor: pointer;
+    width: 60px;
+    height: 64px;
+    background: url(/ktvOnline/images/l.png) no-repeat;
+    z-index: 10;
+}
+.last:hover{
+	background-color: white;
+}
+
+.selectlist{
+	width:100%;
+	color: white;
+}
+.selectlist td{
+	line-height:20px; 
+	font-size:13px;
+	color:white; 
+	text-align:center;
+	height: 30px;
+}
+.selectlist td a{
+	color: white;
+	text-decoration: none;
+}
+.selectlist td a:hover{
+	color:  rgb(63, 64, 72);
+}
+.a-css{
+	color: white;
+	text-decoration: none;
+}
+.a-css:hover{
+	color:  rgb(63, 64, 72);	
+}
+
+#singerlist{}
+#singerlist td{
+	line-height:20px; 
+	font-size:13px;
+	color:#555; 
+	text-align:left;
+	height: 30px;
+}
+
+#lyricWrapper {
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+    margin-top: 20px;
+    display:none;
+}
+#lyricContainer {
+	width:300px;
+    position: relative;
+    top: 20px;
+    text-shadow: 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000; 
+}
+#lyricContainer p{
+     text-align: center;
+}
+/*播放时的字体状态*/
+.fontStyle {
+	font-size: 20px;
+	color: #ccc;
+}
+
+.controls_content {
+	width:60px;
+    height:40px;
+	display: block;
+	position: relative;
+	border: 0px solid lightblue;
+	background-color: rgb(0, 0, 0);
+	z-index: 9999;
+	-moz-opacity: 0;
+	opacity: 0;
+	filter: alpha(opacity = 50);
+	vertical-align: middle;
+	top: -30px;
+	left:-15px;
+}
+
+#tip_div{
+	display: none;
+	position: absolute;
+	z-index: 9998;
+	vertical-align: middle;
+	top: 200px;
+	left:580px;
+}

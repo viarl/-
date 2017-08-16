@@ -1,0 +1,195 @@
+@CHARSET "UTF-8";
+
+#chatMain {
+	        display:none;
+            position: absolute;
+            left: 400px;
+            top: 100px;
+            height: 400px;
+            width: 500px;
+            background-color: #F0FFF0;
+            border: 1px solid #717171;
+        }
+        #chatMain header {
+            height: 39px;
+            width: 490px;
+            border-bottom: 1px solid #717171;
+            text-align: right;
+            padding-right: 10px;
+        }
+        #chatMain header a {
+            text-decoration:none;
+            vertical-align: -webkit-baseline-middle;
+            padding: 10px;
+            color: #000000;
+        }
+        #chatMain header a:hover {
+            color: #ffffff;
+        }
+        #chatMain header > label {
+          /* display:block;  */       
+            position: absolute;
+            top:9px;
+            left:20px;
+        }       
+        #chatMain > table {
+            height: 90%;
+            width: 100%;
+        }
+        #singer {
+            /*height: 100%;*/
+            width: 30%;
+            background-color: #F0FFF0;
+            border-right: 1px solid #717171;
+            text-align: center;
+            -moz-border-radius-bottomleft: 5px;
+        }
+        #singer div {
+            overflow-y: auto;
+            height: 100%;
+            width: 100%;
+        }
+        #singer > div > table {
+            width: 100%;
+        }
+        #singer > div > table td {
+            height: 30px;
+            text-align: right;
+            padding-right: 20px;
+        }
+        #singer > div > table td:hover {
+            background-color: #B2DFEE;
+        }
+        #singer > div > table td a{
+            color: #000000;
+            text-decoration:none;
+        }
+        #singer > div > table td button {
+            cursor: pointer;
+            border: 0;
+            background: none;
+            border-radius: 3px;
+            margin-left: 5px;
+        }
+        #singer > div > table td button:hover {
+            background-color: #a8a9bb;
+        }
+        #chatBody {
+            border-bottom: 1px solid #717171;
+        }
+        #chatBody > div {
+            overflow-y: auto;
+            scroll-height:100%;
+            height: 239px;
+        }
+        #chatBody div table {
+            width: 330px;
+        }
+        #chatBody div table img {
+            height: 32px;
+            width: 32px;
+            margin: 5px;
+        }
+        .commentR {
+            margin-top: 5px;
+            display:inline-block;
+            padding: 5px 7px 5px 7px;
+            position: relative;
+            background: #f0f0f0;
+            border-radius: 5px;
+            word-break:break-all;
+        }
+        .commentR:after{
+            content: '';
+            width: 0;
+            height: 0;
+            position: absolute;
+            top: 5px;
+            right: -16px;
+            border: solid 8px;
+            border-color: transparent transparent transparent #f0f0f0;
+            font-size: 0;
+        }
+        .commentL {
+            margin-top: 5px;
+            display:inline-block;
+            padding: 5px 5px 5px 5px;
+            position: relative;
+            background: #76eec6;
+            border-radius: 5px;
+            word-break:break-all;
+        }
+        .commentL:after{
+            content: '';
+            width: 0;
+            height: 0;
+            position: absolute;
+            top: 5px;
+            left: -16px;
+            border: solid 8px;
+            border-color: transparent #76eec6 transparent transparent;
+            font-size: 0;
+        }
+        #chatBody div table tr td:first-child {
+            width: 40px;
+            text-align: center;
+            vertical-align: top;
+        }
+        #chatBody div table tr td:last-child {
+            width: 40px;
+            text-align: center;
+            vertical-align: top;
+        }
+        #chatBody div table tr td:nth-child(2) {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        #chatBtn {
+            padding:10px;
+            height: 100px;
+        }
+        #chatBtn textarea{
+            height: 100%;
+            width: 80%;
+            border: 1px solid #717171;
+            border-radius: 5px;
+            padding: 3px 7px 3px 7px;
+            overflow: hidden;
+            resize: none;
+        }
+        .send {
+            position: absolute;
+            bottom: 11px;
+            right:10px;
+            height: 100px;
+            padding:15px;
+            background-color: #009ACD;
+            color: #ffffff;
+            border-radius: 5px;
+            border: 0;
+            cursor: pointer;
+            font-weight:normal;
+        }
+        .send:hover {
+            background: #40E0D0;
+        }
+        
+        
+        #a_news{
+            display:none;
+            position: absolute;
+            left: 10px;
+            top: 600px;
+            background-color: #F0FFF0;
+            border: 1px solid #717171;
+        }
+        
+        #a_news label{
+            font-size: 12px;
+        }          
+        
+                     
+        .chat_ts{
+	       color: #EE0000;
+	       text-decoration: none;
+        }
